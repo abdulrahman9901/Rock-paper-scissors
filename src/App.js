@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import GameComponent from './components/play';
+import ScoreComponent from './components/score';
+import RulesModal from './components/rulesModal';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route ,useNavigate} from "react-router-dom";
+import ResultComponent from './components/result';
+import React, { useState } from 'react';
 
-function App() {
+export default function App() {
+  const [score, setScore] = useState(0);
+  const updateScore = (newScore) => {
+    setScore(score + newScore);
+  };
+
   return (
+    <BrowserRouter>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <ScoreComponent score={score} />
+      <Routes>
+        <Route path="/" element={<GameComponent />} />
+        <Route
+              path="result/:option"
+              element={<ResultComponent updateScore={updateScore} />}
+            />
+        <Route path="*" element={<h1>Null</h1>} />
+      </Routes>
+      <RulesModal />
       </header>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

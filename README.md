@@ -12,9 +12,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -43,8 +41,7 @@ Users should be able to:
 ![phone result view](./screenshots/phone-result.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://rock-paper-scissors-blond-one.vercel.app/)
 
 ## My process
 

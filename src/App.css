@@ -234,6 +234,7 @@ width:fit-content !important;
   }
   .rules {
     right: auto;
+    bottom: 1%;
   }
   .option {
     height: 120px;
